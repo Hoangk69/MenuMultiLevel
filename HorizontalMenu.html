@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu ngang đa cấp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .icon{
+            line-height: 60px;
+            padding: 0px 2px;
+        }
+        header{
+            height: 60px;
+            background-color: #000;
+            text-align: center;
+        }
+        a{
+            font-family: 'Varela Round', sans-serif;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        ul{
+            list-style: none;
+        }
+        header .nav > li{
+            display: inline-block;
+            position: relative;
+        }
+        header .nav > li > a{
+            display: inline-block;
+            padding: 0px 24px;
+            line-height: 60px;
+        }
+        header .nav > li:hover > a,
+        header .nav .subnav >li:hover > a,
+        header .nav .subnav .subnav-2 > li:hover > a,
+        header .nav .subnav .subnav-2  .subnav-3 > li:hover > a
+        {
+            background-color: #ccc;
+            color: #000;
+        }
+        header ul.nav > li > ul.subnav li{
+            position: relative;
+        }
+
+        header .nav ul{
+            position: absolute;
+            top: 60px;
+            background-color: #fff;
+            box-shadow: 20px 20px 50px grey;
+            width: 170px;
+            display: none;
+        }
+        
+        header .nav .subnav li a{
+            color: #000;
+            line-height: 60px;
+            text-align: left;
+            padding-left: 15px;
+            display: block;
+        }
+
+        /* cấp 2 3*/
+        header .nav .subnav ul{
+            position: absolute;
+            left: 170px;
+            top: 0px;
+            background-color: #fff;
+            box-shadow: 20px 20px 50px grey;
+            width: 170px;
+            display: none;
+        }
+        header .nav > li:hover > .subnav,
+        header .subnav > li:hover .subnav-2,
+        header .subnav-2 > li:hover ul.subnav-3
+        {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <li><a href="#">HOME</a></li>
+            <li>
+                <a href="#">
+                    PRODUCT 
+                    <ion-icon name="caret-down-outline" class="icon"></ion-icon>
+                </a>
+                <ul class="subnav">
+                    <li><a href="#">Iphone 11 Series</a></li>
+                    <li><a href="#">Iphone 12 Series</a></li>
+                    <li>
+                        <a href="#">
+                            Iphone 13 Series
+                            <ion-icon name="caret-forward-outline" class="icon"></ion-icon>
+                        </a>
+                        <ul class="subnav-2">
+                            <li><a href="#">Iphone 13 mini</a></li>
+                            <li>
+                                <a href="#">Iphone 13
+                                    <ion-icon name="caret-forward-outline" class="icon"></ion-icon>
+                                </a>
+                                <ul class="subnav-3">
+                                    <li><a href="">128GB</a></li>
+                                    <li><a href="">256GB</a></li>
+                                    <li><a href="">512GB</a></li>
+                                    <li><a href="">1T</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Iphone 13 Pro</a></li>
+                            <li><a href="#">Iphone 13 Pro Max</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Iphone 14 Series</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CONTENT</a></li>
+        </ul>
+    </header>
+</body>
+</html>

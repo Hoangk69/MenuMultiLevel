@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Varela Round', sans-serif;
+            font-weight: 600;
+            text-decoration: none;   
+        }
+        ul{
+            list-style: none;
+        }
+        p{
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+        }
+        .nav > li > a{
+            color: #fff;
+        }
+        a{
+            display: block;
+            padding: 10px;
+        }
+        .icon{
+            line-height: 60px;
+            padding: 0px 2px;
+        }
+        .container{
+            background-color: #000;
+            width: 200px;
+            padding: 10px 0px;
+            border-radius: 10px;
+        }
+        .nav  li{
+            position: relative;
+        }
+        .nav ul{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 20px 20px 50px grey;
+            width: 200px;
+            display: none;
+        }
+        .nav ul a{
+            color: #000;
+        }
+
+        /* hover */
+        .nav > li:hover > a,
+        .nav .subnav > li:hover > a,
+        .nav .subnav-2 >li:hover >a,
+        .nav .subnav-3 > li:hover > a{
+            background-color: #ccc;
+            color: #000;
+        }
+        .nav > li:hover .subnav,
+        .nav .subnav > li:hover .subnav-2,
+        .nav .subnav-2 > li:hover .subnav-3{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>CATEGORY</p>
+        <ul class="nav">
+            <li><a href="">HOME</a></li>
+            <li>
+                <a href="">PRODUCT
+                    <ion-icon name="caret-forward-outline" class="icon"></ion-icon>
+                </a>
+                <ul class="subnav">
+                    <li><a href="#">Iphone 11 Series</a></li>
+                    <li><a href="#">Iphone 12 Series</a></li>
+                    <li>
+                        <a href="#">Iphone 13 Series
+                            <ion-icon name="caret-forward-outline" class="icon"></ion-icon>
+                        </a>
+                        <ul class="subnav-2">
+                            <li><a href="#">Iphone 13 mini</a></li>
+                            <li>
+                                <a href="#">Iphone 13
+                                    <ion-icon name="caret-forward-outline" class="icon"></ion-icon>
+                                </a>
+                                <ul class="subnav-3">
+                                    <li><a href="">128GB</a></li>
+                                    <li><a href="">256GB</a></li>
+                                    <li><a href="">512GB</a></li>
+                                    <li><a href="">1T</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Iphone 13 Pro</a></li>
+                            <li><a href="#">Iphone 13 Pro Max</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Iphone 14 Series</a></li>
+                </ul>
+            </li>
+            <li><a href="">CONTENT</a></li>
+        </ul>
+    </div>
+</body>
+</html>
